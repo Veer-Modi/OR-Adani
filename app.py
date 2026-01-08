@@ -23,23 +23,10 @@ if os.path.exists(_cbc_path):
 try:
     import statsmodels.api as sm
 except ImportError:
-    # Create a minimal mock for trendline functionality
-    class MockStatsmodels:
-        @staticmethod
-        def trendline_function(data):
-            # Simple linear trendline as fallback
-            import numpy as np
-            x = np.arange(len(data))
-            if len(data) > 1:
-                coeffs = np.polyfit(x, data, 1)
-                trend = coeffs[0] * x + coeffs[1]
-                return trend.tolist()
-            else:
-                return data
-    
-    # Monkey patch the import
-    import sys
-    sys.modules['statsmodels.api'] = MockStatsmodels
+    # Apply comprehensive statsmodels fix
+    from statsmodels_fix import patch_statsmodels, patch_plotly_trendline
+    patch_statsmodels()
+    patch_plotly_trendline()
 
 from backend.auth.session import (
     ensure_session_defaults,

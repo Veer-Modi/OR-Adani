@@ -1140,3 +1140,6 @@ Traceback (most recent call last):
   File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\trendline_functions\__init__.py", line 42, in ols
     import statsmodels.api as sm
 ModuleNotFoundError: No module named 'statsmodels'
+2026-01-09 00:23:57,576 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-09 00:29:46,374 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-09 00:34:12,820 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}

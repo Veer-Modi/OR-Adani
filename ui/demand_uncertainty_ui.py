@@ -22,7 +22,7 @@ def render_demand_uncertainty_analysis():
     if not require_authentication():
         return
     
-    if not require_role(["admin", "planner"]):
+    if not require_role(["Admin", "Planner"]):
         return
     
     st.title("🎲 Demand Uncertainty Analysis")
@@ -113,24 +113,38 @@ def run_analysis(num_scenarios: int, volatility: float, run_det: bool, run_stoch
             
             # Generate scenarios
             scenarios = analyzer.generate_demand_scenarios(num_scenarios, volatility)
+            st.info(f"✅ Generated {len(scenarios)} scenarios with {volatility:.1%} volatility")
             
             # Run optimizations
             if run_det:
-                analyzer.run_deterministic_optimization()
+                with st.spinner("🔧 Running deterministic optimization..."):
+                    det_metrics = analyzer.run_deterministic_optimization()
+                    st.success(f"✅ Deterministic: ${det_metrics.total_cost:,.0f}, Service: {det_metrics.service_level:.1%}")
             
             if run_stoch:
-                analyzer.run_stochastic_optimization()
+                with st.spinner("🎲 Running stochastic optimization..."):
+                    stoch_metrics = analyzer.run_stochastic_optimization()
+                    st.success(f"✅ Stochastic: ${stoch_metrics.total_cost:,.0f}, Service: {stoch_metrics.service_level:.1%}")
             
             # Get comparison
             comparison = analyzer.compare_performance()
             
-            # Generate plots
+            # Generate plots (with error handling)
             plots = {}
             if generate_plots:
-                plots = analyzer.create_comparison_plots()
+                try:
+                    plots = analyzer.create_comparison_plots()
+                    st.success("✅ Plots generated successfully")
+                except Exception as plot_error:
+                    st.warning(f"⚠️ Plot generation failed: {str(plot_error)}")
+                    st.info("Analysis completed successfully, but plots could not be generated.")
             
             # Generate report
-            report = analyzer.generate_report()
+            try:
+                report = analyzer.generate_report()
+            except Exception as report_error:
+                st.warning(f"⚠️ Report generation failed: {str(report_error)}")
+                report = "Report generation failed"
             
             # Store in session state
             st.session_state.analyzer = analyzer
@@ -142,11 +156,14 @@ def run_analysis(num_scenarios: int, volatility: float, run_det: bool, run_stoch
                 'scenarios': scenarios
             }
             
-            st.success("✅ Analysis completed successfully!")
+            st.success("🎉 Analysis completed successfully!")
             
         except Exception as e:
             st.error(f"❌ Analysis failed: {str(e)}")
             st.exception(e)
+            return False
+    
+    return True
 
 
 def display_analysis_results():
