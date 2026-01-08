@@ -840,3 +840,303 @@ Traceback (most recent call last):
 streamlit.errors.StreamlitAPIException: Slider `min_value` must be less than the `max_value`.
 The values were 2 and 2.
 2026-01-08 22:08:45,832 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 22:15:56,742 | ERROR | Page error: Scenario Comparison | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\scenario_comparison.py", line 72, in render_scenario_comparison
+    sample_size = st.slider(
+        "Number of recent runs to display",
+    ...<4 lines>...
+        help="Adjust how many of the most recent runs are included in the charts below.",
+    )
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\streamlit\runtime\metrics_util.py", line 409, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\streamlit\elements\widgets\slider.py", line 502, in slider
+    return self._slider(
+           ~~~~~~~~~~~~^
+        label=label,
+        ^^^^^^^^^^^^
+    ...<12 lines>...
+        ctx=ctx,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\streamlit\elements\widgets\slider.py", line 780, in _slider
+    raise StreamlitAPIException(
+    ...<2 lines>...
+    )
+streamlit.errors.StreamlitAPIException: Slider `min_value` must be less than the `max_value`.
+The values were 2 and 2.
+2026-01-08 22:35:20,543 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 22:35:24,769 | ERROR | Page error: Scenario Comparison | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\scenario_comparison.py", line 109, in render_scenario_comparison
+    fig_tradeoff = px.scatter(
+        df_sample,
+    ...<6 lines>...
+        labels={"avg_buffer": "Avg buffer (tons)", "objective_value": "Total cost"},
+    )
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_core.py", line 2702, in make_figure
+    patch, fit_results = make_trace_kwargs(
+                         ~~~~~~~~~~~~~~~~~^
+        args, trace_spec, group, mapping_labels.copy(), sizeref
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_core.py", line 430, in make_trace_kwargs
+    y_out, hover_header, fit_results = trendline_function(
+                                       ~~~~~~~~~~~~~~~~~~^
+        args["trendline_options"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        non_missing.to_numpy(),  # numpy array
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\trendline_functions\__init__.py", line 42, in ols
+    import statsmodels.api as sm
+ModuleNotFoundError: No module named 'statsmodels'
+2026-01-08 22:36:57,674 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 22:37:00,560 | ERROR | Page error: Scenario Comparison | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\scenario_comparison.py", line 109, in render_scenario_comparison
+    fig_tradeoff = px.scatter(
+        df_sample,
+    ...<6 lines>...
+        labels={"avg_buffer": "Avg buffer (tons)", "objective_value": "Total cost"},
+    )
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_core.py", line 2702, in make_figure
+    patch, fit_results = make_trace_kwargs(
+                         ~~~~~~~~~~~~~~~~~^
+        args, trace_spec, group, mapping_labels.copy(), sizeref
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_core.py", line 430, in make_trace_kwargs
+    y_out, hover_header, fit_results = trendline_function(
+                                       ~~~~~~~~~~~~~~~~~~^
+        args["trendline_options"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        non_missing.to_numpy(),  # numpy array
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\trendline_functions\__init__.py", line 42, in ols
+    import statsmodels.api as sm
+ModuleNotFoundError: No module named 'statsmodels'
+2026-01-08 22:40:26,431 | ERROR | Page error: Management Insights Dashboard | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\management_dashboard.py", line 122, in render_management_dashboard
+    st.metric("Production headroom", f"{components.get('production_headroom', 0.0):.1f}%")
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2026-01-08 22:40:36,730 | ERROR | Page error: Scenario Comparison | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\scenario_comparison.py", line 109, in render_scenario_comparison
+    fig_tradeoff = px.scatter(
+        df_sample,
+    ...<6 lines>...
+        labels={"avg_buffer": "Avg buffer (tons)", "objective_value": "Total cost"},
+    )
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_core.py", line 2702, in make_figure
+    patch, fit_results = make_trace_kwargs(
+                         ~~~~~~~~~~~~~~~~~^
+        args, trace_spec, group, mapping_labels.copy(), sizeref
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_core.py", line 430, in make_trace_kwargs
+    y_out, hover_header, fit_results = trendline_function(
+                                       ~~~~~~~~~~~~~~~~~~^
+        args["trendline_options"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        non_missing.to_numpy(),  # numpy array
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\trendline_functions\__init__.py", line 42, in ols
+    import statsmodels.api as sm
+ModuleNotFoundError: No module named 'statsmodels'
+2026-01-08 22:52:07,582 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 23:05:54,636 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 23:06:13,449 | ERROR | Page error: Scenario Comparison | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\scenario_comparison.py", line 109, in render_scenario_comparison
+    fig_tradeoff = px.scatter(
+        df_sample,
+    ...<6 lines>...
+        labels={"avg_buffer": "Avg buffer (tons)", "objective_value": "Total cost"},
+    )
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_core.py", line 2702, in make_figure
+    patch, fit_results = make_trace_kwargs(
+                         ~~~~~~~~~~~~~~~~~^
+        args, trace_spec, group, mapping_labels.copy(), sizeref
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_core.py", line 430, in make_trace_kwargs
+    y_out, hover_header, fit_results = trendline_function(
+                                       ~~~~~~~~~~~~~~~~~~^
+        args["trendline_options"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        non_missing.to_numpy(),  # numpy array
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\trendline_functions\__init__.py", line 42, in ols
+    import statsmodels.api as sm
+ModuleNotFoundError: No module named 'statsmodels'
+2026-01-08 23:08:55,773 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 23:11:02,743 | ERROR | Page error: Scenario Comparison | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\scenario_comparison.py", line 109, in render_scenario_comparison
+    fig_tradeoff = px.scatter(
+        df_sample,
+    ...<6 lines>...
+        labels={"avg_buffer": "Avg buffer (tons)", "objective_value": "Total cost"},
+    )
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_core.py", line 2702, in make_figure
+    patch, fit_results = make_trace_kwargs(
+                         ~~~~~~~~~~~~~~~~~^
+        args, trace_spec, group, mapping_labels.copy(), sizeref
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_core.py", line 430, in make_trace_kwargs
+    y_out, hover_header, fit_results = trendline_function(
+                                       ~~~~~~~~~~~~~~~~~~^
+        args["trendline_options"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        non_missing.to_numpy(),  # numpy array
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\trendline_functions\__init__.py", line 42, in ols
+    import statsmodels.api as sm
+ModuleNotFoundError: No module named 'statsmodels'
+2026-01-08 23:27:02,825 | ERROR | Page error: Scenario Comparison | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\scenario_comparison.py", line 109, in render_scenario_comparison
+    fig_tradeoff = px.scatter(
+        df_sample,
+    ...<6 lines>...
+        labels={"avg_buffer": "Avg buffer (tons)", "objective_value": "Total cost"},
+    )
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_core.py", line 2702, in make_figure
+    patch, fit_results = make_trace_kwargs(
+                         ~~~~~~~~~~~~~~~~~^
+        args, trace_spec, group, mapping_labels.copy(), sizeref
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_core.py", line 430, in make_trace_kwargs
+    y_out, hover_header, fit_results = trendline_function(
+                                       ~~~~~~~~~~~~~~~~~~^
+        args["trendline_options"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        non_missing.to_numpy(),  # numpy array
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\trendline_functions\__init__.py", line 42, in ols
+    import statsmodels.api as sm
+ModuleNotFoundError: No module named 'statsmodels'
+2026-01-09 00:01:19,239 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-09 00:01:43,402 | ERROR | Page error: Scenario Comparison | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\scenario_comparison.py", line 109, in render_scenario_comparison
+    fig_tradeoff = px.scatter(
+        df_sample,
+    ...<6 lines>...
+        labels={"avg_buffer": "Avg buffer (tons)", "objective_value": "Total cost"},
+    )
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_core.py", line 2702, in make_figure
+    patch, fit_results = make_trace_kwargs(
+                         ~~~~~~~~~~~~~~~~~^
+        args, trace_spec, group, mapping_labels.copy(), sizeref
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_core.py", line 430, in make_trace_kwargs
+    y_out, hover_header, fit_results = trendline_function(
+                                       ~~~~~~~~~~~~~~~~~~^
+        args["trendline_options"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        non_missing.to_numpy(),  # numpy array
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\trendline_functions\__init__.py", line 42, in ols
+    import statsmodels.api as sm
+ModuleNotFoundError: No module named 'statsmodels'
+2026-01-09 00:10:21,465 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-09 00:21:19,572 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-09 00:21:25,259 | ERROR | Page error: Scenario Comparison | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\scenario_comparison.py", line 109, in render_scenario_comparison
+    fig_tradeoff = px.scatter(
+        df_sample,
+    ...<6 lines>...
+        labels={"avg_buffer": "Avg buffer (tons)", "objective_value": "Total cost"},
+    )
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_core.py", line 2702, in make_figure
+    patch, fit_results = make_trace_kwargs(
+                         ~~~~~~~~~~~~~~~~~^
+        args, trace_spec, group, mapping_labels.copy(), sizeref
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\_core.py", line 430, in make_trace_kwargs
+    y_out, hover_header, fit_results = trendline_function(
+                                       ~~~~~~~~~~~~~~~~~~^
+        args["trendline_options"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        non_missing.to_numpy(),  # numpy array
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\plotly\express\trendline_functions\__init__.py", line 42, in ols
+    import statsmodels.api as sm
+ModuleNotFoundError: No module named 'statsmodels'

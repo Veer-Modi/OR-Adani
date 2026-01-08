@@ -69,10 +69,13 @@ def render_scenario_comparison(role: str) -> None:
     # Limit to most recent per type to keep UI clean.
     df = df.sort_values("created_at", ascending=False)
 
+    # Handle case where there are fewer runs than minimum slider value
+    max_slider_value = max(5, min(50, len(df)))
+    
     sample_size = st.slider(
         "Number of recent runs to display",
         min_value=5,
-        max_value=min(50, len(df)),
+        max_value=max_slider_value,
         value=min(15, len(df)),
         step=5,
         help="Adjust how many of the most recent runs are included in the charts below.",

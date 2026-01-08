@@ -19,6 +19,28 @@ if os.path.exists(_cbc_path):
     if _cbc_path not in current_path:
         os.environ["PATH"] = _cbc_path + os.pathsep + current_path
 
+# Fix statsmodels import issue for plotly trendline functions
+try:
+    import statsmodels.api as sm
+except ImportError:
+    # Create a minimal mock for trendline functionality
+    class MockStatsmodels:
+        @staticmethod
+        def trendline_function(data):
+            # Simple linear trendline as fallback
+            import numpy as np
+            x = np.arange(len(data))
+            if len(data) > 1:
+                coeffs = np.polyfit(x, data, 1)
+                trend = coeffs[0] * x + coeffs[1]
+                return trend.tolist()
+            else:
+                return data
+    
+    # Monkey patch the import
+    import sys
+    sys.modules['statsmodels.api'] = MockStatsmodels
+
 from backend.auth.session import (
     ensure_session_defaults,
     is_authenticated,
@@ -41,6 +63,7 @@ from ui.uncertainty_settings import render_uncertainty_settings
 from ui.scenario_comparison import render_scenario_comparison
 from ui.management_dashboard import render_management_dashboard
 from ui.run_comparison import render_run_comparison
+from ui.demand_uncertainty_ui import render_demand_uncertainty_analysis
 
 
 def main() -> None:
@@ -100,6 +123,7 @@ def main() -> None:
             "Optimization Results",
             "Demand Uncertainty Settings",
             "Scenario Comparison",
+            "Demand Uncertainty Analysis",
             "Management Insights Dashboard",
             "Run Comparison",
         ]
@@ -137,6 +161,8 @@ def main() -> None:
             safe_page("Demand Uncertainty Settings")(render_uncertainty_settings)(role=role)
         elif choice == "Scenario Comparison":
             safe_page("Scenario Comparison")(render_scenario_comparison)(role=role)
+        elif choice == "Demand Uncertainty Analysis":
+            safe_page("Demand Uncertainty Analysis")(render_demand_uncertainty_analysis)()
         elif choice == "Management Insights Dashboard":
             safe_page("Management Insights Dashboard")(render_management_dashboard)(role=role)
         elif choice == "Run Comparison":
