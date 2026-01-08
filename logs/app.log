@@ -1186,3 +1186,254 @@ Traceback (most recent call last):
     f"{diffs['unmet_demand_diff']:+,.0f}",
        ~~~~~^^^^^^^^^^^^^^^^^^^^^
 KeyError: 'unmet_demand_diff'
+2026-01-09 01:23:33,008 | INFO | AUDIT | login_success | {"actor": "krishnaparidwal98@gmail.com", "role": "Admin"}
+2026-01-09 01:23:44,919 | ERROR | Page error: Demand Uncertainty Analysis | context={}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\demand_uncertainty_ui.py", line 94, in render_demand_uncertainty_analysis
+    display_analysis_results()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\demand_uncertainty_ui.py", line 190, in display_analysis_results
+    display_visualizations(plots)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\demand_uncertainty_ui.py", line 499, in display_visualizations
+    st.plotly_chart(fig, use_container_width=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\streamlit\runtime\metrics_util.py", line 409, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\streamlit\elements\plotly_chart.py", line 510, in plotly_chart
+    plotly_chart_proto.id = compute_and_register_element_id(
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        "plotly_chart",
+        ^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        use_container_width=use_container_width,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\streamlit\elements\lib\utils.py", line 226, in compute_and_register_element_id
+    _register_element_id(ctx, element_type, element_id)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\streamlit\elements\lib\utils.py", line 132, in _register_element_id
+    raise StreamlitDuplicateElementId(element_type)
+streamlit.errors.StreamlitDuplicateElementId: There are multiple `plotly_chart` elements with the same auto-generated ID. When this element is created, it is assigned an internal ID based on the element type and provided parameters. Multiple elements with the same type and parameters will cause this error.
+
+To fix this error, please pass a unique `key` argument to the `plotly_chart` element.
+2026-01-09 01:30:44,409 | ERROR | Page error: Demand Uncertainty Analysis | context={}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\demand_uncertainty_ui.py", line 94, in render_demand_uncertainty_analysis
+    display_analysis_results()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\demand_uncertainty_ui.py", line 190, in display_analysis_results
+    display_visualizations(plots)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\demand_uncertainty_ui.py", line 499, in display_visualizations
+    st.plotly_chart(fig, use_container_width=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\streamlit\runtime\metrics_util.py", line 409, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\streamlit\elements\plotly_chart.py", line 510, in plotly_chart
+    plotly_chart_proto.id = compute_and_register_element_id(
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        "plotly_chart",
+        ^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        use_container_width=use_container_width,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\streamlit\elements\lib\utils.py", line 226, in compute_and_register_element_id
+    _register_element_id(ctx, element_type, element_id)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\streamlit\elements\lib\utils.py", line 132, in _register_element_id
+    raise StreamlitDuplicateElementId(element_type)
+streamlit.errors.StreamlitDuplicateElementId: There are multiple `plotly_chart` elements with the same auto-generated ID. When this element is created, it is assigned an internal ID based on the element type and provided parameters. Multiple elements with the same type and parameters will cause this error.
+
+To fix this error, please pass a unique `key` argument to the `plotly_chart` element.
+2026-01-09 01:34:47,003 | INFO | AUDIT | login_success | {"actor": "krishnaparidwal98@gmail.com", "role": "Admin"}
+2026-01-09 01:38:27,645 | ERROR | Page error: Management Insights Dashboard | context={}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\management_dashboard.py", line 122, in render_management_dashboard
+    st.metric("Production headroom", f"{components.get('production_headroom', 0.0):.1f}%")
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2026-01-09 01:38:32,255 | ERROR | Page error: Management Insights Dashboard | context={}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\management_dashboard.py", line 122, in render_management_dashboard
+    st.metric("Production headroom", f"{components.get('production_headroom', 0.0):.1f}%")
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2026-01-09 01:38:33,334 | ERROR | Page error: Management Insights Dashboard | context={}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\management_dashboard.py", line 122, in render_management_dashboard
+    st.metric("Production headroom", f"{components.get('production_headroom', 0.0):.1f}%")
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2026-01-09 01:38:50,987 | INFO | AUDIT | optimization_success | {"actor": "krishnaparidwal98@gmail.com", "mode": "deterministic", "requested_solver": "cbc", "solver_used": "cbc", "months": ["2025-09"], "runtime_seconds": 0.09398913383483887}
+2026-01-09 01:38:50,990 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\optimization_run.py", line 255, in render_optimization_run
+    cost_df = pd.DataFrame([
+              ^^
+NameError: name 'pd' is not defined. Did you mean: 'id'?
+2026-01-09 01:45:50,005 | INFO | AUDIT | login_success | {"actor": "krishnaparidwal98@gmail.com", "role": "Admin"}
+2026-01-09 01:47:10,052 | ERROR | Page error: Management Insights Dashboard | context={}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\management_dashboard.py", line 122, in render_management_dashboard
+    st.metric("Production headroom", f"{components.get('production_headroom', 0.0):.1f}%")
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2026-01-09 01:47:11,989 | ERROR | Page error: Management Insights Dashboard | context={}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\management_dashboard.py", line 122, in render_management_dashboard
+    st.metric("Production headroom", f"{components.get('production_headroom', 0.0):.1f}%")
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2026-01-09 01:47:34,220 | INFO | AUDIT | optimization_success | {"actor": "krishnaparidwal98@gmail.com", "mode": "deterministic", "requested_solver": "cbc", "solver_used": "cbc", "months": ["2025-09"], "runtime_seconds": 0.20273303985595703}
+2026-01-09 01:47:34,230 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\optimization_run.py", line 255, in render_optimization_run
+    cost_df = pd.DataFrame([
+              ^^
+NameError: name 'pd' is not defined. Did you mean: 'id'?
+2026-01-09 01:47:51,063 | INFO | AUDIT | optimization_success | {"actor": "krishnaparidwal98@gmail.com", "mode": "deterministic", "requested_solver": "cbc", "solver_used": "cbc", "months": ["2025-09"], "runtime_seconds": 0.1627655029296875}
+2026-01-09 01:47:51,073 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\optimization_run.py", line 255, in render_optimization_run
+    cost_df = pd.DataFrame([
+              ^^
+NameError: name 'pd' is not defined. Did you mean: 'id'?
+2026-01-09 01:48:08,689 | ERROR | Page error: Scenario Comparison | context={}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\scenario_comparison.py", line 109, in render_scenario_comparison
+    fig_tradeoff = px.scatter(
+        df_sample,
+    ...<6 lines>...
+        labels={"avg_buffer": "Avg buffer (tons)", "objective_value": "Total cost"},
+    )
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\plotly\express\_core.py", line 2702, in make_figure
+    patch, fit_results = make_trace_kwargs(
+                         ~~~~~~~~~~~~~~~~~^
+        args, trace_spec, group, mapping_labels.copy(), sizeref
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\plotly\express\_core.py", line 430, in make_trace_kwargs
+    y_out, hover_header, fit_results = trendline_function(
+                                       ~~~~~~~~~~~~~~~~~~^
+        args["trendline_options"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        non_missing.to_numpy(),  # numpy array
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\plotly\express\trendline_functions\__init__.py", line 64, in ols
+    fit_results = sm.OLS(y, x, missing="drop").fit()
+                  ~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+TypeError: patch_statsmodels.<locals>.MockStatsmodelsAPI.OLS.__init__() got an unexpected keyword argument 'missing'
+2026-01-09 01:48:40,935 | ERROR | Page error: Scenario Comparison | context={}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\scenario_comparison.py", line 109, in render_scenario_comparison
+    fig_tradeoff = px.scatter(
+        df_sample,
+    ...<6 lines>...
+        labels={"avg_buffer": "Avg buffer (tons)", "objective_value": "Total cost"},
+    )
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\plotly\express\_core.py", line 2702, in make_figure
+    patch, fit_results = make_trace_kwargs(
+                         ~~~~~~~~~~~~~~~~~^
+        args, trace_spec, group, mapping_labels.copy(), sizeref
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\plotly\express\_core.py", line 430, in make_trace_kwargs
+    y_out, hover_header, fit_results = trendline_function(
+                                       ~~~~~~~~~~~~~~~~~~^
+        args["trendline_options"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        non_missing.to_numpy(),  # numpy array
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\plotly\express\trendline_functions\__init__.py", line 64, in ols
+    fit_results = sm.OLS(y, x, missing="drop").fit()
+                  ~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+TypeError: patch_statsmodels.<locals>.MockStatsmodelsAPI.OLS.__init__() got an unexpected keyword argument 'missing'
+2026-01-09 01:48:56,574 | ERROR | Page error: Scenario Comparison | context={}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\scenario_comparison.py", line 109, in render_scenario_comparison
+    fig_tradeoff = px.scatter(
+        df_sample,
+    ...<6 lines>...
+        labels={"avg_buffer": "Avg buffer (tons)", "objective_value": "Total cost"},
+    )
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\plotly\express\_core.py", line 2702, in make_figure
+    patch, fit_results = make_trace_kwargs(
+                         ~~~~~~~~~~~~~~~~~^
+        args, trace_spec, group, mapping_labels.copy(), sizeref
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\plotly\express\_core.py", line 430, in make_trace_kwargs
+    y_out, hover_header, fit_results = trendline_function(
+                                       ~~~~~~~~~~~~~~~~~~^
+        args["trendline_options"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        non_missing.to_numpy(),  # numpy array
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\.venv\Lib\site-packages\plotly\express\trendline_functions\__init__.py", line 64, in ols
+    fit_results = sm.OLS(y, x, missing="drop").fit()
+                  ~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+TypeError: patch_statsmodels.<locals>.MockStatsmodelsAPI.OLS.__init__() got an unexpected keyword argument 'missing'
+2026-01-09 01:49:21,618 | ERROR | Page error: Management Insights Dashboard | context={}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\management_dashboard.py", line 122, in render_management_dashboard
+    st.metric("Production headroom", f"{components.get('production_headroom', 0.0):.1f}%")
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2026-01-09 01:49:30,632 | ERROR | Page error: Management Insights Dashboard | context={}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\management_dashboard.py", line 122, in render_management_dashboard
+    st.metric("Production headroom", f"{components.get('production_headroom', 0.0):.1f}%")
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__

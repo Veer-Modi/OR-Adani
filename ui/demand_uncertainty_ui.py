@@ -11,6 +11,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import numpy as np
 from typing import Dict, Any
+from pathlib import Path
 
 from backend.middleware.role_guard import require_authentication, require_role
 from demand_uncertainty_analysis import DemandUncertaintyAnalyzer, run_complete_analysis
@@ -106,7 +107,10 @@ def run_analysis(num_scenarios: int, volatility: float, run_det: bool, run_stoch
         try:
             # Load base data
             from simple_feasible_loader import load_simple_feasible_data
-            base_data = load_simple_feasible_data("Dataset_Dummy_Clinker_3MPlan.xlsx", ['1'])
+
+            project_root = Path(__file__).resolve().parents[1]
+            dataset_path = project_root / "Dataset_Dummy_Clinker_3MPlan.xlsx"
+            base_data = load_simple_feasible_data(str(dataset_path), ['1'])
             
             # Initialize analyzer
             analyzer = DemandUncertaintyAnalyzer(base_data)
@@ -181,13 +185,25 @@ def display_analysis_results():
         display_summary_view(comparison, scenarios)
     
     with tab2:
-        display_cost_analysis(comparison, plots)
+        try:
+            display_cost_analysis(comparison, plots)
+        except Exception as exc:
+            st.error("Something went wrong. Please try again or contact an administrator.")
+            st.exception(exc)
     
     with tab3:
-        display_performance_analysis(comparison, plots)
+        try:
+            display_performance_analysis(comparison, plots)
+        except Exception as exc:
+            st.error("Something went wrong. Please try again or contact an administrator.")
+            st.exception(exc)
     
     with tab4:
-        display_visualizations(plots)
+        try:
+            display_visualizations(plots)
+        except Exception as exc:
+            st.error("Something went wrong. Please try again or contact an administrator.")
+            st.exception(exc)
 
 
 def display_summary_view(comparison: Dict, scenarios: list):
@@ -494,9 +510,9 @@ def display_visualizations(plots: Dict):
         return
     
     # Display each plot
-    for plot_name, fig in plots.items():
+    for idx, (plot_name, fig) in enumerate(plots.items()):
         st.subheader(f"📊 {plot_name.replace('_', ' ').title()}")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, key=f"uncertainty_plot_{idx}_{plot_name}")
         
         # Add interpretation
         if plot_name == 'cost_comparison':
@@ -532,7 +548,10 @@ def display_scenario_configuration(volatility: float):
     if st.checkbox("🔍 Preview Scenarios"):
         with st.spinner("Generating scenario preview..."):
             from simple_feasible_loader import load_simple_feasible_data
-            base_data = load_simple_feasible_data("Dataset_Dummy_Clinker_3MPlan.xlsx", ['1'])
+
+            project_root = Path(__file__).resolve().parents[1]
+            dataset_path = project_root / "Dataset_Dummy_Clinker_3MPlan.xlsx"
+            base_data = load_simple_feasible_data(str(dataset_path), ['1'])
             analyzer = DemandUncertaintyAnalyzer(base_data)
             scenarios = analyzer.generate_demand_scenarios(5, volatility)
             

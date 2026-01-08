@@ -27,6 +27,9 @@ class SimpleOptimizationResults:
 
 def _safe_value(v) -> float:
     try:
+        # Pyomo Objective components should be evaluated via `.expr`.
+        if hasattr(v, "expr"):
+            return float(pyo.value(v.expr))
         return float(pyo.value(v))
     except Exception:
         return 0.0

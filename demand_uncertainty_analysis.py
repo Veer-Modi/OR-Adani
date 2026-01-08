@@ -152,17 +152,60 @@ class DemandUncertaintyAnalyzer:
         if not self.scenarios:
             self.generate_demand_scenarios()
         
-        # Build stochastic model
-        model = self._build_stochastic_model()
-        
-        # Solve
-        outcome = solve_model(model, SolverConfig(solver_name='cbc', time_limit_seconds=120))
-        
-        if not outcome.ok:
-            raise RuntimeError(f"Stochastic optimization failed: {outcome.message}")
-        
-        # Parse results for each scenario and calculate expected metrics
-        expected_metrics = self._calculate_stochastic_metrics(model)
+        expected_total_cost = 0.0
+        expected_production_cost = 0.0
+        expected_transport_cost = 0.0
+        expected_holding_cost = 0.0
+        expected_demand_penalty = 0.0
+        expected_unmet_demand = 0.0
+        expected_total_demand = 0.0
+        expected_total_production = 0.0
+        expected_total_shipment = 0.0
+        expected_facility_utilization = 0.0
+
+        total_prob = float(sum(s.probability for s in self.scenarios))
+        if total_prob <= 0:
+            raise RuntimeError("Stochastic optimization failed: scenario probabilities sum to zero")
+
+        for scenario in self.scenarios:
+            prob = float(scenario.probability) / total_prob
+            scenario_data = self.create_scenario_data(scenario)
+
+            model = build_simple_feasible_model(scenario_data)
+            outcome = solve_model(model, SolverConfig(solver_name='cbc', time_limit_seconds=60))
+            if not outcome.ok:
+                raise RuntimeError(f"Scenario '{scenario.name}' optimization failed: {outcome.message}")
+
+            results = parse_simple_results(model, scenario_data.plant_names)
+            metrics = self._calculate_performance_metrics(results, scenario_data, "stochastic_scenario")
+
+            expected_total_cost += prob * metrics.total_cost
+            expected_production_cost += prob * metrics.production_cost
+            expected_transport_cost += prob * metrics.transport_cost
+            expected_holding_cost += prob * metrics.holding_cost
+            expected_demand_penalty += prob * metrics.demand_penalty
+            expected_unmet_demand += prob * metrics.unmet_demand
+            expected_total_demand += prob * metrics.total_demand
+            expected_total_production += prob * metrics.total_production
+            expected_total_shipment += prob * metrics.total_shipment
+            expected_facility_utilization += prob * metrics.facility_utilization
+
+        service_level = 1 - (expected_unmet_demand / expected_total_demand) if expected_total_demand > 0 else 0.0
+
+        expected_metrics = PerformanceMetrics(
+            total_cost=expected_total_cost,
+            production_cost=expected_production_cost,
+            transport_cost=expected_transport_cost,
+            holding_cost=expected_holding_cost,
+            demand_penalty=expected_demand_penalty,
+            service_level=service_level,
+            unmet_demand=expected_unmet_demand,
+            total_demand=expected_total_demand,
+            total_production=expected_total_production,
+            total_shipment=expected_total_shipment,
+            facility_utilization=expected_facility_utilization,
+        )
+
         self.stochastic_results = expected_metrics
         
         print(f"✅ Stochastic optimization completed")
