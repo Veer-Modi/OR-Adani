@@ -1,0 +1,842 @@
+2026-01-06 14:00:26,171 | INFO | AUDIT | login_success | {"actor": "krishnaparidwal9879@gmail.com", "role": "Admin"}
+2026-01-06 16:16:59,629 | INFO | AUDIT | login_failed | {"actor": "khushi.rajput@gmail.com", "reason": "Invalid email or password."}
+2026-01-06 16:18:03,476 | INFO | AUDIT | login_failed | {"actor": "khushi@gmail.com", "reason": "Invalid email or password."}
+2026-01-06 16:18:05,171 | INFO | AUDIT | login_failed | {"actor": "khushi@gmail.com", "reason": "Invalid email or password."}
+2026-01-06 16:18:06,060 | INFO | AUDIT | login_failed | {"actor": "khushi@gmail.com", "reason": "Invalid email or password."}
+2026-01-06 16:19:28,043 | INFO | AUDIT | login_success | {"actor": "new@gmail.com", "role": "Admin"}
+2026-01-06 16:33:28,593 | INFO | AUDIT | optimization_failed | {"actor": "new@gmail.com", "mode": "deterministic", "requested_solver": "cbc", "solver_used": null, "termination": "not_available"}
+2026-01-06 16:33:37,462 | WARNING | Gurobi not available; falling back to CBC.
+2026-01-06 16:33:37,463 | INFO | AUDIT | optimization_failed | {"actor": "new@gmail.com", "mode": "deterministic", "requested_solver": "gurobi", "solver_used": null, "termination": "not_available"}
+2026-01-06 16:37:27,385 | INFO | AUDIT | login_failed | {"actor": "", "reason": "Please enter a valid email address."}
+2026-01-06 16:37:58,357 | INFO | AUDIT | login_failed | {"actor": "khushi@gmail.com", "reason": "Invalid email or password."}
+2026-01-06 16:38:07,420 | INFO | AUDIT | login_success | {"actor": "new@gmail.com", "role": "Admin"}
+2026-01-06 16:38:22,758 | WARNING | Solver 'gurobi' not available; falling back to cbc.
+2026-01-06 16:38:22,758 | WARNING | Solver 'cbc' not available; falling back to highs.
+2026-01-06 16:38:22,808 | INFO | AUDIT | optimization_success | {"actor": "new@gmail.com", "mode": "deterministic", "requested_solver": "gurobi", "solver_used": "highs", "months": ["2026-01"], "runtime_seconds": 0.033172607421875}
+2026-01-06 16:41:28,205 | INFO | AUDIT | logout | {"actor": "new@gmail.com", "role": "Admin"}
+2026-01-06 16:42:22,005 | INFO | AUDIT | login_failed | {"actor": "abc@gmail.com", "reason": "Invalid email or password."}
+2026-01-06 16:42:24,053 | INFO | AUDIT | login_failed | {"actor": "abc@gmail.com", "reason": "Invalid email or password."}
+2026-01-06 16:42:29,760 | INFO | AUDIT | login_failed | {"actor": "abc@gmail.com", "reason": "Invalid email or password."}
+2026-01-06 16:42:33,394 | INFO | AUDIT | login_success | {"actor": "abc@gmail.com", "role": "Planner"}
+2026-01-06 16:43:33,895 | INFO | AUDIT | logout | {"actor": "abc@gmail.com", "role": "Planner"}
+2026-01-06 16:44:42,875 | INFO | AUDIT | login_success | {"actor": "new1@gmail.com", "role": "Viewer"}
+2026-01-06 23:31:01,385 | INFO | AUDIT | login_success | {"actor": "khichiptatik90@gmail.com", "role": "Planner"}
+2026-01-08 11:20:54,992 | INFO | AUDIT | login_success | {"actor": "xyz@gmail.com", "role": "Admin"}
+2026-01-08 11:20:54,992 | INFO | AUDIT | login_success | {"actor": "xyz@gmail.com", "role": "Admin"}
+2026-01-08 11:20:54,992 | INFO | AUDIT | login_success | {"actor": "xyz@gmail.com", "role": "Admin"}
+2026-01-08 11:20:54,992 | INFO | AUDIT | login_success | {"actor": "xyz@gmail.com", "role": "Admin"}
+2026-01-08 11:20:54,992 | INFO | AUDIT | login_success | {"actor": "xyz@gmail.com", "role": "Admin"}
+2026-01-08 14:07:33,911 | INFO | AUDIT | login_failed | {"actor": "zeel@gmail.com", "reason": "Invalid email or password."}
+2026-01-08 14:07:47,332 | INFO | AUDIT | login_failed | {"actor": "zeel@gmail.com", "reason": "Invalid email or password."}
+2026-01-08 14:07:48,673 | INFO | AUDIT | login_failed | {"actor": "zeel@gmail.com", "reason": "Invalid email or password."}
+2026-01-08 14:07:52,862 | INFO | AUDIT | login_failed | {"actor": "zeel@gmail.com", "reason": "Invalid email or password."}
+2026-01-08 14:07:53,693 | INFO | AUDIT | login_failed | {"actor": "zeel@gmail.com", "reason": "Invalid email or password."}
+2026-01-08 14:19:54,379 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 15:12:29,021 | INFO | AUDIT | login_failed | {"actor": "xyz123@gmail.com", "reason": "Invalid email or password."}
+2026-01-08 15:12:37,358 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 15:19:31,518 | INFO | AUDIT | optimization_failed | {"actor": "xyz123@gmail.com", "mode": "deterministic", "requested_solver": "cbc", "solver_used": "cbc", "termination": "infeasible"}
+2026-01-08 15:20:08,383 | INFO | AUDIT | optimization_failed | {"actor": "xyz123@gmail.com", "mode": "deterministic", "requested_solver": "cbc", "solver_used": "cbc", "termination": "infeasible"}
+2026-01-08 15:20:32,657 | INFO | AUDIT | optimization_failed | {"actor": "xyz123@gmail.com", "mode": "deterministic", "requested_solver": "cbc", "solver_used": "cbc", "termination": "infeasible"}
+2026-01-08 17:02:50,429 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 17:03:05,956 | INFO | AUDIT | optimization_failed | {"actor": "xyz123@gmail.com", "mode": "deterministic", "requested_solver": "cbc", "solver_used": "cbc", "termination": "infeasible"}
+2026-01-08 17:11:21,634 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 17:11:28,363 | INFO | AUDIT | optimization_failed | {"actor": "xyz123@gmail.com", "mode": "deterministic", "requested_solver": "cbc", "solver_used": "cbc", "termination": "infeasible"}
+2026-01-08 17:21:38,705 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 17:21:47,392 | INFO | AUDIT | optimization_failed | {"actor": "xyz123@gmail.com", "mode": "deterministic", "requested_solver": "cbc", "solver_used": "cbc", "termination": "infeasible"}
+2026-01-08 17:22:09,982 | INFO | AUDIT | optimization_failed | {"actor": "xyz123@gmail.com", "mode": "deterministic", "requested_solver": "cbc", "solver_used": "cbc", "termination": "infeasible"}
+2026-01-08 17:22:11,327 | INFO | AUDIT | optimization_failed | {"actor": "xyz123@gmail.com", "mode": "deterministic", "requested_solver": "cbc", "solver_used": "cbc", "termination": "infeasible"}
+2026-01-08 17:22:11,563 | INFO | AUDIT | optimization_failed | {"actor": "xyz123@gmail.com", "mode": "deterministic", "requested_solver": "cbc", "solver_used": "cbc", "termination": "infeasible"}
+2026-01-08 17:22:21,978 | INFO | AUDIT | optimization_failed | {"actor": "xyz123@gmail.com", "mode": "deterministic", "requested_solver": "cbc", "solver_used": "cbc", "termination": "infeasible"}
+2026-01-08 17:27:32,563 | INFO | AUDIT | optimization_failed | {"actor": "xyz123@gmail.com", "mode": "deterministic", "requested_solver": "cbc", "solver_used": "cbc", "termination": "infeasible"}
+2026-01-08 17:27:33,459 | INFO | AUDIT | optimization_failed | {"actor": "xyz123@gmail.com", "mode": "deterministic", "requested_solver": "cbc", "solver_used": "cbc", "termination": "infeasible"}
+2026-01-08 17:30:50,970 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 18:29:56,083 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 18:30:15,478 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 18:30:16,335 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 18:30:20,258 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 18:30:20,733 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 18:30:50,212 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 18:30:50,747 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 18:30:50,999 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 18:30:51,271 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 18:30:51,515 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 18:30:51,752 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 18:30:52,001 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 18:30:52,265 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 18:30:52,514 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 18:31:35,136 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 18:31:35,835 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 18:31:37,011 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:25:42,758 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 21:26:03,084 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:26:08,442 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:26:09,185 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:26:10,276 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:26:49,747 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:26:58,905 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:26:59,241 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:26:59,491 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:31:20,678 | INFO | AUDIT | login_failed | {"actor": "xyz123@gmail.com", "reason": "Invalid email or password."}
+2026-01-08 21:31:54,950 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 21:32:16,727 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:33:04,126 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:33:05,411 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:33:06,205 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:33:17,735 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:33:18,145 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:33:35,866 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 21:33:44,981 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:33:51,519 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:33:52,090 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:34:07,901 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:34:08,775 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:34:09,343 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:34:10,283 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 184, in render_optimization_run
+    results = parse_results(model, plant_names=data.plant_names)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in parse_results
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\optimization\result_parser.py", line 103, in <genexpr>
+    hold_cost = sum(_safe_value(model.Inv[p, t]) * _safe_value(model.HoldCost[p]) for p in model.P for t in model.T)
+                                                               ^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pyomo\core\base\block.py", line 552, in __getattr__
+    raise AttributeError(
+        "'%s' object has no attribute '%s'" % (self.__class__.__name__, val)
+    )
+AttributeError: 'ConcreteModel' object has no attribute 'HoldCost'. Did you mean: 'ProdCost'?
+2026-01-08 21:41:47,990 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 21:41:54,030 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 191, in render_optimization_run
+    inv_df["safety_stock"] = inv_df["plant_id"].map(lambda pid: float(data.safety_stock.get(pid, 0.0)))
+                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\series.py", line 4719, in map
+    new_values = self._map_values(arg, na_action=na_action)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\base.py", line 925, in _map_values
+    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\algorithms.py", line 1743, in map_array
+    return lib.map_infer(values, mapper, convert=convert)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/lib.pyx", line 2999, in pandas._libs.lib.map_infer
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 191, in <lambda>
+    inv_df["safety_stock"] = inv_df["plant_id"].map(lambda pid: float(data.safety_stock.get(pid, 0.0)))
+                                                                      ^^^^^^^^^^^^^^^^^
+AttributeError: 'SimpleFeasibleData' object has no attribute 'safety_stock'
+2026-01-08 21:41:57,186 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 191, in render_optimization_run
+    inv_df["safety_stock"] = inv_df["plant_id"].map(lambda pid: float(data.safety_stock.get(pid, 0.0)))
+                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\series.py", line 4719, in map
+    new_values = self._map_values(arg, na_action=na_action)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\base.py", line 925, in _map_values
+    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\algorithms.py", line 1743, in map_array
+    return lib.map_infer(values, mapper, convert=convert)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/lib.pyx", line 2999, in pandas._libs.lib.map_infer
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 191, in <lambda>
+    inv_df["safety_stock"] = inv_df["plant_id"].map(lambda pid: float(data.safety_stock.get(pid, 0.0)))
+                                                                      ^^^^^^^^^^^^^^^^^
+AttributeError: 'SimpleFeasibleData' object has no attribute 'safety_stock'
+2026-01-08 21:41:58,210 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 191, in render_optimization_run
+    inv_df["safety_stock"] = inv_df["plant_id"].map(lambda pid: float(data.safety_stock.get(pid, 0.0)))
+                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\series.py", line 4719, in map
+    new_values = self._map_values(arg, na_action=na_action)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\base.py", line 925, in _map_values
+    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\algorithms.py", line 1743, in map_array
+    return lib.map_infer(values, mapper, convert=convert)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/lib.pyx", line 2999, in pandas._libs.lib.map_infer
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 191, in <lambda>
+    inv_df["safety_stock"] = inv_df["plant_id"].map(lambda pid: float(data.safety_stock.get(pid, 0.0)))
+                                                                      ^^^^^^^^^^^^^^^^^
+AttributeError: 'SimpleFeasibleData' object has no attribute 'safety_stock'
+2026-01-08 21:42:03,611 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 191, in render_optimization_run
+    inv_df["safety_stock"] = inv_df["plant_id"].map(lambda pid: float(data.safety_stock.get(pid, 0.0)))
+                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\series.py", line 4719, in map
+    new_values = self._map_values(arg, na_action=na_action)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\base.py", line 925, in _map_values
+    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\algorithms.py", line 1743, in map_array
+    return lib.map_infer(values, mapper, convert=convert)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/lib.pyx", line 2999, in pandas._libs.lib.map_infer
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 191, in <lambda>
+    inv_df["safety_stock"] = inv_df["plant_id"].map(lambda pid: float(data.safety_stock.get(pid, 0.0)))
+                                                                      ^^^^^^^^^^^^^^^^^
+AttributeError: 'SimpleFeasibleData' object has no attribute 'safety_stock'
+2026-01-08 21:42:04,298 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 191, in render_optimization_run
+    inv_df["safety_stock"] = inv_df["plant_id"].map(lambda pid: float(data.safety_stock.get(pid, 0.0)))
+                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\series.py", line 4719, in map
+    new_values = self._map_values(arg, na_action=na_action)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\base.py", line 925, in _map_values
+    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\algorithms.py", line 1743, in map_array
+    return lib.map_infer(values, mapper, convert=convert)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/lib.pyx", line 2999, in pandas._libs.lib.map_infer
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 191, in <lambda>
+    inv_df["safety_stock"] = inv_df["plant_id"].map(lambda pid: float(data.safety_stock.get(pid, 0.0)))
+                                                                      ^^^^^^^^^^^^^^^^^
+AttributeError: 'SimpleFeasibleData' object has no attribute 'safety_stock'
+2026-01-08 21:42:11,305 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 191, in render_optimization_run
+    inv_df["safety_stock"] = inv_df["plant_id"].map(lambda pid: float(data.safety_stock.get(pid, 0.0)))
+                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\series.py", line 4719, in map
+    new_values = self._map_values(arg, na_action=na_action)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\base.py", line 925, in _map_values
+    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\algorithms.py", line 1743, in map_array
+    return lib.map_infer(values, mapper, convert=convert)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/lib.pyx", line 2999, in pandas._libs.lib.map_infer
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 191, in <lambda>
+    inv_df["safety_stock"] = inv_df["plant_id"].map(lambda pid: float(data.safety_stock.get(pid, 0.0)))
+                                                                      ^^^^^^^^^^^^^^^^^
+AttributeError: 'SimpleFeasibleData' object has no attribute 'safety_stock'
+2026-01-08 21:42:14,827 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 191, in render_optimization_run
+    inv_df["safety_stock"] = inv_df["plant_id"].map(lambda pid: float(data.safety_stock.get(pid, 0.0)))
+                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\series.py", line 4719, in map
+    new_values = self._map_values(arg, na_action=na_action)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\base.py", line 925, in _map_values
+    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\algorithms.py", line 1743, in map_array
+    return lib.map_infer(values, mapper, convert=convert)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/lib.pyx", line 2999, in pandas._libs.lib.map_infer
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 191, in <lambda>
+    inv_df["safety_stock"] = inv_df["plant_id"].map(lambda pid: float(data.safety_stock.get(pid, 0.0)))
+                                                                      ^^^^^^^^^^^^^^^^^
+AttributeError: 'SimpleFeasibleData' object has no attribute 'safety_stock'
+2026-01-08 21:42:15,344 | ERROR | Page error: Run Optimization | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 191, in render_optimization_run
+    inv_df["safety_stock"] = inv_df["plant_id"].map(lambda pid: float(data.safety_stock.get(pid, 0.0)))
+                             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\series.py", line 4719, in map
+    new_values = self._map_values(arg, na_action=na_action)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\base.py", line 925, in _map_values
+    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\pandas\core\algorithms.py", line 1743, in map_array
+    return lib.map_infer(values, mapper, convert=convert)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/lib.pyx", line 2999, in pandas._libs.lib.map_infer
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\optimization_run.py", line 191, in <lambda>
+    inv_df["safety_stock"] = inv_df["plant_id"].map(lambda pid: float(data.safety_stock.get(pid, 0.0)))
+                                                                      ^^^^^^^^^^^^^^^^^
+AttributeError: 'SimpleFeasibleData' object has no attribute 'safety_stock'
+2026-01-08 21:54:04,584 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 21:54:10,217 | INFO | AUDIT | optimization_success | {"actor": "xyz123@gmail.com", "mode": "deterministic", "requested_solver": "cbc", "solver_used": "cbc", "months": ["2026-02"], "runtime_seconds": 0.06951093673706055}
+2026-01-08 22:04:18,887 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-08 22:08:09,187 | ERROR | Page error: Scenario Comparison | context={}
+Traceback (most recent call last):
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\ui\scenario_comparison.py", line 72, in render_scenario_comparison
+    sample_size = st.slider(
+        "Number of recent runs to display",
+    ...<4 lines>...
+        help="Adjust how many of the most recent runs are included in the charts below.",
+    )
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\streamlit\runtime\metrics_util.py", line 409, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\streamlit\elements\widgets\slider.py", line 502, in slider
+    return self._slider(
+           ~~~~~~~~~~~~^
+        label=label,
+        ^^^^^^^^^^^^
+    ...<12 lines>...
+        ctx=ctx,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\zeelk\OneDrive\Desktop\Adani\hack-clink\auth-system\.venv\Lib\site-packages\streamlit\elements\widgets\slider.py", line 780, in _slider
+    raise StreamlitAPIException(
+    ...<2 lines>...
+    )
+streamlit.errors.StreamlitAPIException: Slider `min_value` must be less than the `max_value`.
+The values were 2 and 2.
+2026-01-08 22:08:45,832 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
