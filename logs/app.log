@@ -1143,3 +1143,46 @@ ModuleNotFoundError: No module named 'statsmodels'
 2026-01-09 00:23:57,576 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
 2026-01-09 00:29:46,374 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
 2026-01-09 00:34:12,820 | INFO | AUDIT | login_success | {"actor": "xyz123@gmail.com", "role": "Admin"}
+2026-01-09 01:09:58,776 | INFO | AUDIT | login_success | {"actor": "krishnaparidwal98@gmail.com", "role": "Admin"}
+2026-01-09 01:10:24,554 | ERROR | Page error: Demand Uncertainty Analysis | context={}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\demand_uncertainty_ui.py", line 94, in render_demand_uncertainty_analysis
+    display_analysis_results()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\demand_uncertainty_ui.py", line 181, in display_analysis_results
+    display_summary_view(comparison, scenarios)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\demand_uncertainty_ui.py", line 266, in display_summary_view
+    f"{diffs['unmet_demand_diff']:+,.0f}",
+       ~~~~~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'unmet_demand_diff'
+2026-01-09 01:10:35,989 | ERROR | Page error: Demand Uncertainty Analysis | context={}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\demand_uncertainty_ui.py", line 94, in render_demand_uncertainty_analysis
+    display_analysis_results()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\demand_uncertainty_ui.py", line 181, in display_analysis_results
+    display_summary_view(comparison, scenarios)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\demand_uncertainty_ui.py", line 266, in display_summary_view
+    f"{diffs['unmet_demand_diff']:+,.0f}",
+       ~~~~~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'unmet_demand_diff'
+2026-01-09 01:10:37,115 | ERROR | Page error: Demand Uncertainty Analysis | context={}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\backend\core\error_handler.py", line 33, in _wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\demand_uncertainty_ui.py", line 94, in render_demand_uncertainty_analysis
+    display_analysis_results()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\demand_uncertainty_ui.py", line 181, in display_analysis_results
+    display_summary_view(comparison, scenarios)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\z_clink2\OR-Adani\ui\demand_uncertainty_ui.py", line 266, in display_summary_view
+    f"{diffs['unmet_demand_diff']:+,.0f}",
+       ~~~~~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'unmet_demand_diff'

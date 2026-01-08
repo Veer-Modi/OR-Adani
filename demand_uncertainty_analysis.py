@@ -387,14 +387,19 @@ class DemandUncertaintyAnalyzer:
         
         det = self.deterministic_results
         stoch = self.stochastic_results
+
+        total_cost_pct = 0.0
+        if det.total_cost:
+            total_cost_pct = ((stoch.total_cost - det.total_cost) / det.total_cost) * 100
         
         comparison = {
             'deterministic': det,
             'stochastic': stoch,
             'differences': {
                 'total_cost_diff': stoch.total_cost - det.total_cost,
-                'total_cost_pct': ((stoch.total_cost - det.total_cost) / det.total_cost) * 100,
+                'total_cost_pct': total_cost_pct,
                 'service_level_diff': stoch.service_level - det.service_level,
+                'unmet_demand_diff': stoch.unmet_demand - det.unmet_demand,
                 'production_cost_diff': stoch.production_cost - det.production_cost,
                 'transport_cost_diff': stoch.transport_cost - det.transport_cost,
                 'holding_cost_diff': stoch.holding_cost - det.holding_cost,
