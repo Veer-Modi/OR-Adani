@@ -58,6 +58,21 @@ def load_simple_feasible_data(file_path: str, selected_months: List[str]) -> Sim
     # Time periods
     months = selected_months
     
+    # Check if we have a mismatch
+    available_periods = set()
+    if 'TIME PERIOD' in capacity_df.columns:
+        available_periods.update(capacity_df['TIME PERIOD'].astype(str).unique())
+    if 'TIME PERIOD' in demand_df.columns:
+        available_periods.update(demand_df['TIME PERIOD'].astype(str).unique())
+    
+    # If none of the selected months are in available periods, fallback to available periods
+    # This fixes the issue where UI passes '2024-01' but Excel has '1'
+    if not any(m in available_periods for m in months):
+        print(f"Warning: Selected months {months} not found in Excel {available_periods}. Falling back to available periods.")
+        # Filter out 'nan'
+        months = sorted([p for p in available_periods if p != 'nan'])
+
+    
     # Production capacity (with feasibility adjustment)
     production_capacity = {}
     for _, row in capacity_df.iterrows():

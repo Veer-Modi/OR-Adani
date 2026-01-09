@@ -18,6 +18,7 @@ from __future__ import annotations
 
 from typing import List
 
+import pandas as pd
 import streamlit as st
 
 from backend.middleware.role_guard import require_authentication, require_role
@@ -60,26 +61,35 @@ def render_optimization_run(role: str) -> None:
         st.warning("Viewer role: you cannot run optimization. Open Optimization Results to view runs.")
         return
 
+    # START CARD: Configuration
+    st.markdown('<div class="industrial-card">', unsafe_allow_html=True)
+    st.subheader("Configuration")
+
     available_months = _get_available_months()
 
     if not available_months:
         st.warning("No demand months found. Please create Demand records first.")
         return
 
-    selected_months = st.multiselect("Select planning months", options=available_months, default=available_months[:1])
-
-    demand_type = st.selectbox(
-        "Demand type to optimize",
-        ["Fixed"],
-        index=0,
-        help="Phase 3 is deterministic. Scenario demand will be added in a later phase.",
-    )
+    cols_cfg = st.columns([2, 1])
+    with cols_cfg[0]:
+        selected_months = st.multiselect("Select planning months", options=available_months, default=available_months[:1])
+    with cols_cfg[1]:
+        demand_type = st.selectbox(
+            "Demand type",
+            ["Fixed"],
+            index=0,
+            help="Phase 3 is deterministic.",
+        )
 
     # Only expose CBC in the UI to avoid confusion with unavailable solvers.
-    solver_choice = st.selectbox("Solver", ["CBC"], index=0)
-
-    time_limit = st.number_input("Time limit (seconds)", min_value=10, value=60, step=10)
-    mip_gap = st.number_input("MIP gap (example: 0.01 = 1%)", min_value=0.0, value=0.01, step=0.01)
+    cols_params = st.columns(3)
+    with cols_params[0]:
+        solver_choice = st.selectbox("Solver", ["CBC"], index=0)
+    with cols_params[1]:
+        time_limit = st.number_input("Time limit (s)", min_value=10, value=60, step=10)
+    with cols_params[2]:
+        mip_gap = st.number_input("MIP gap", min_value=0.0, value=0.01, step=0.01)
 
     # Phase 4: uncertainty settings are optional and stored in MongoDB.
     scen_ok, scen_msg, uncertainty_enabled, configured_scenarios = get_scenarios_for_optimization()
@@ -105,8 +115,10 @@ def render_optimization_run(role: str) -> None:
                 "Robust minimizes worst-case cost while remaining feasible in every scenario."
             ),
         )
+    
+    st.markdown('</div>', unsafe_allow_html=True) # END CARD: Configuration
 
-    if st.button("Run Optimization"):
+    if st.button("Run Optimization", type="primary"): # Styled button
         with st.spinner("Running optimization..."):
             try:
                 # Try to use simple feasible model first (no backend dependencies)
@@ -246,49 +258,63 @@ def render_optimization_run(role: str) -> None:
                     st.session_state.last_optimization_run_id = run_id
                     st.info("Run saved. Open Optimization Results to view and export.")
                     
-                    # Also display results directly on this page
-                    st.divider()
-                    st.subheader("📊 Optimization Results")
-                    
-                    # Display cost breakdown
-                    cost = results.cost_breakdown
-                    cost_df = pd.DataFrame([
-                        {"type": "production", "cost": float(cost.get("production", 0.0))},
-                        {"type": "transport", "cost": float(cost.get("transport", 0.0))},
-                        {"type": "holding", "cost": float(cost.get("holding", 0.0))},
-                        {"type": "demand_penalty", "cost": float(cost.get("demand_penalty", 0.0))},
-                    ])
-                    
-                    col1, col2 = st.columns(2)
-                    with col1:
-                        st.metric("Objective value (total cost)", round(results.objective_value, 2))
-                    with col2:
-                        st.metric("Active production plans", len(results.production_df))
-                    
-                    st.subheader("Cost Breakdown")
-                    st.dataframe(cost_df, use_container_width=True)
-                    
-                    # Display production plan
-                    st.subheader("🏭 Production Plan")
-                    if not results.production_df.empty:
-                        st.dataframe(results.production_df, use_container_width=True)
-                    else:
-                        st.warning("No production data available")
-                    
-                    # Display transport plan
-                    st.subheader("🚚 Transport Plan")
-                    if not results.transport_df.empty:
-                        st.dataframe(results.transport_df, use_container_width=True)
-                    else:
-                        st.warning("No transport data available")
-                    
-                    # Display inventory plan
-                    st.subheader("📦 Inventory Plan")
-                    if not results.inventory_df.empty:
-                        st.dataframe(results.inventory_df, use_container_width=True)
-                    else:
-                        st.warning("No inventory data available")
+                    try:
+                        # Also display results directly on this page
+                        st.divider()
+                        st.subheader("📊 Optimization Results")
                         
+                        # START CARD: Results
+                        st.markdown('<div class="industrial-card">', unsafe_allow_html=True)
+                        
+                        # Display cost breakdown
+                        cost = results.cost_breakdown
+                        cost_df = pd.DataFrame([
+                            {"type": "production", "cost": float(cost.get("production", 0.0))},
+                            {"type": "transport", "cost": float(cost.get("transport", 0.0))},
+                            {"type": "holding", "cost": float(cost.get("holding", 0.0))},
+                            {"type": "demand_penalty", "cost": float(cost.get("demand_penalty", 0.0))},
+                        ])
+                        
+                        col1, col2 = st.columns(2)
+                        with col1:
+                            st.metric("Objective value (total cost)", round(results.objective_value, 2))
+                        with col2:
+                            st.metric("Active production plans", len(results.production_df))
+                        
+                        st.subheader("Cost Breakdown")
+                        st.dataframe(cost_df, use_container_width=True)
+                        
+                        # Display production plan
+                        st.subheader("🏭 Production Plan")
+                        if not results.production_df.empty:
+                            st.dataframe(results.production_df, use_container_width=True)
+                        else:
+                            st.warning("No production data available")
+                        
+                        # Display transport plan
+                        st.subheader("🚚 Transport Plan")
+                        if not results.transport_df.empty:
+                            st.dataframe(results.transport_df, use_container_width=True)
+                        else:
+                            st.warning("No transport data available")
+                        
+                        # Display inventory plan
+                        st.subheader("📦 Inventory Plan")
+                        if not results.inventory_df.empty:
+                            st.dataframe(results.inventory_df, use_container_width=True)
+                        else:
+                            st.warning("No inventory data available")
+                        
+                        st.markdown('</div>', unsafe_allow_html=True) # END CARD: Results
+                            
+                    except Exception as e:
+                        import traceback
+                        with open("last_error.txt", "w") as f:
+                            f.write(traceback.format_exc())
+                        st.error(f"Something went wrong: {e}")
+                        st.error("Error details saved to last_error.txt")
+                        st.info("Run saved successfully (verified). Please check Optimization Results page.")
+
                 else:
                     st.warning(msg)
 

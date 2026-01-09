@@ -57,7 +57,7 @@ def solve_model(model: pyo.ConcreteModel, config: SolverConfig) -> SolveOutcome:
 
     requested_solver = (config.solver_name or "").strip().lower()
 
-    if requested_solver not in {"gurobi", "cbc", "highs", "scip"}:
+    if requested_solver not in {"gurobi", "cbc", "highs", "scip", "appsi_highs"}:
         return SolveOutcome(
             ok=False,
             message="Invalid solver selected.",
@@ -76,10 +76,10 @@ def solve_model(model: pyo.ConcreteModel, config: SolverConfig) -> SolveOutcome:
     solver_name = requested_solver
     fallback_chain: list[str]
     if requested_solver == "gurobi":
-        fallback_chain = ["cbc", "highs", "scip"]
+        fallback_chain = ["cbc", "appsi_highs", "highs", "scip"]
     elif requested_solver == "cbc":
-        fallback_chain = ["highs", "scip"]
-    elif requested_solver == "highs":
+        fallback_chain = ["appsi_highs", "highs", "scip"]
+    elif requested_solver in {"highs", "appsi_highs"}:
         fallback_chain = ["scip"]
     else:
         fallback_chain = []
@@ -115,9 +115,8 @@ def solve_model(model: pyo.ConcreteModel, config: SolverConfig) -> SolveOutcome:
             # CBC uses different option names.
             solver.options["seconds"] = int(config.time_limit_seconds)
             # CBC mip gap option may differ by build; keep it optional.
-        elif solver_name == "highs":
-            # HiGHS option names may vary; keep it minimal and avoid hard failures.
-            pass
+        elif solver_name in {"highs", "appsi_highs"}:
+             solver.options["time_limit"] = int(config.time_limit_seconds)
         elif solver_name == "scip":
             # SCIP solver options
             solver.options["limits/time"] = int(config.time_limit_seconds)

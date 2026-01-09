@@ -43,7 +43,7 @@ def check_solvers() -> Dict[str, Any]:
 
     gurobi_ok = _available("gurobi")
     cbc_ok = _available("cbc")
-    highs_ok = _available("highs")
+    highs_ok = _available("highs") or _available("appsi_highs")
     scip_ok = _available("scip")
 
     return {

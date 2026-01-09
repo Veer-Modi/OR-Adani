@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\khush\Downloads\clinker-pro\OR-Adani\ui\optimization_run.py", line 256, in render_optimization_run
+    cost_df = pd.DataFrame([
+              ^^
+NameError: name 'pd' is not defined. Did you mean: 'id'?

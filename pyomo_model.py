@@ -247,6 +247,8 @@ class ClinkerPyomoModel:
             solver.options['tmlim'] = 300  # 5 minutes time limit
         elif solver_name == 'cbc':
             solver.options['seconds'] = 300
+        elif solver_name in ['highs', 'appsi_highs']:
+             solver.options['time_limit'] = 300
         
         # Solve
         results = solver.solve(self.model, tee=True)
@@ -354,7 +356,7 @@ def main():
         model.print_model_info()
         
         # Try different solvers
-        solvers = ['glpk', 'cbc']
+        solvers = ['glpk', 'cbc', 'appsi_highs', 'highs']
         status = None
         
         for solver in solvers:

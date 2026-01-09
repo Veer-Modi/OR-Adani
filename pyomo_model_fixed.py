@@ -272,6 +272,8 @@ class FixedClinkerPyomoModel:
                 solver.options['tmlim'] = 120  # 2 minutes
             elif solver_name == 'cbc':
                 solver.options['seconds'] = 120
+            elif solver_name in ['highs', 'appsi_highs']:
+                solver.options['time_limit'] = 120
             
             # Solve
             results = solver.solve(self.model, tee=False)
@@ -463,7 +465,7 @@ def main():
         model.build_fixed_model()
         
         # Try different solvers
-        solvers = ['glpk', 'cbc']
+        solvers = ['glpk', 'cbc', 'appsi_highs', 'highs']
         status = None
         
         for solver in solvers:

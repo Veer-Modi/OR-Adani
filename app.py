@@ -60,9 +60,13 @@ def main() -> None:
 
     st.set_page_config(
         page_title="Role-Based Auth System",
-        page_icon="Auth",
-        layout="centered",
+        page_icon="🏭",
+        layout="wide",
     )
+
+    # Apply Industrial Theme
+    from ui.style import apply_custom_css
+    apply_custom_css()
 
     ensure_session_defaults()
 

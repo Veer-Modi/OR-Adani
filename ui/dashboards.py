@@ -13,6 +13,7 @@ from backend.user.user_service import (
     get_user_summaries,
     set_account_status,
 )
+from ui.home import render_home_overview
 
 
 def render_dashboard() -> None:
@@ -117,7 +118,8 @@ def _render_admin_dashboard() -> None:
 
 
 def _render_planner_dashboard() -> None:
-    st.markdown("### Planner Dashboard")
+    render_home_overview()
+    st.markdown("### Quick Actions")
     st.info("You can add and edit operational data (Plants, Demands, Transport, Inventory Policies).")
     st.write("Use the left sidebar to open modules.")
 

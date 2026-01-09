@@ -100,6 +100,8 @@ def render_optimization_results(role: str) -> None:
         st.error("Run not found.")
         return
 
+    # START CARD: Run Summary
+    st.markdown('<div class="industrial-card">', unsafe_allow_html=True)
     st.subheader("Run summary")
     col1, col2, col3 = st.columns(3)
     col1.write(f"**Status:** {run.get('status')}")
@@ -108,22 +110,32 @@ def render_optimization_results(role: str) -> None:
 
     opt_type = run.get("optimization_type", "deterministic")
     st.write(f"**Optimization type:** {opt_type}")
-
-    scenarios = run.get("scenarios", []) or []
-    scen_probs = run.get("scenario_probabilities", {}) or {}
-    if scenarios:
-        st.subheader("Demand scenarios")
-        st.dataframe(pd.DataFrame(scenarios), use_container_width=True)
-    if scen_probs:
-        st.write("**Scenario probabilities:**")
-        st.dataframe(pd.DataFrame([{"scenario": k, "probability": v} for k, v in scen_probs.items()]), use_container_width=True)
-
+    
     st.write(f"**Message:** {run.get('message')}")
+    
+    st.markdown('</div>', unsafe_allow_html=True) # END CARD: Run Summary
 
+    # KPIs in Cards
     obj = float(run.get("objective_value", 0.0) or 0.0)
-    st.metric("Objective value (total cost)", round(obj, 2))
+    
+    st.markdown(f"""
+    <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+        <div class="kpi-card" style="flex: 1;">
+            <div class="kpi-title">Total Cost</div>
+            <div class="kpi-value">${round(obj/1e6, 2)}M</div>
+        </div>
+        <div class="kpi-card" style="flex: 1; border-color: #F4A261;">
+            <div class="kpi-title">Active Plants</div>
+            <div class="kpi-value">{len(_rows_to_df(run.get("production_rows", [])).get("plant", []).unique())}</div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
 
     cost = run.get("cost_breakdown", {}) or {}
+    
+    # START CARD: Cost Breakdown
+    st.markdown('<div class="industrial-card">', unsafe_allow_html=True)
     st.subheader("Cost breakdown")
     cost_df = pd.DataFrame(
         [
@@ -135,14 +147,20 @@ def render_optimization_results(role: str) -> None:
     st.dataframe(cost_df, use_container_width=True)
 
     if not cost_df.empty:
-        fig_cost = px.pie(cost_df, names="type", values="cost", title="Cost breakdown")
+        fig_cost = px.pie(cost_df, names="type", values="cost", title="Cost breakdown", color_discrete_sequence=['#00ADB5', '#F4A261', '#E0E0E0'])
+        fig_cost.update_layout(template="plotly_dark", paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
         st.plotly_chart(fig_cost, use_container_width=True)
+    
+    st.markdown('</div>', unsafe_allow_html=True) # END CARD: Cost Breakdown
 
     production_df = _rows_to_df(run.get("production_rows", []))
     transport_df = _rows_to_df(run.get("transport_rows", []))
     inventory_df = _rows_to_df(run.get("inventory_rows", []))
 
     st.divider()
+    
+    # START CARD: Production
+    st.markdown('<div class="industrial-card">', unsafe_allow_html=True)
     st.subheader("Production plan")
     st.dataframe(production_df, use_container_width=True)
 
@@ -170,7 +188,7 @@ def render_optimization_results(role: str) -> None:
                 title="Total clinker production by plant",
                 labels={"production": "Production (tons)", "plant": "Plant"},
             )
-            fig_prod.update_layout(showlegend=False)
+            fig_prod.update_layout(showlegend=False, template="plotly_dark", paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
             st.plotly_chart(fig_prod, use_container_width=True)
         else:
             fig_prod_trend = px.line(
@@ -182,10 +200,15 @@ def render_optimization_results(role: str) -> None:
                 title="Monthly production trend by plant",
                 labels={"production": "Production (tons)", "month": "Month", "plant": "Plant"},
             )
+            fig_prod_trend.update_layout(template="plotly_dark", paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
             st.plotly_chart(fig_prod_trend, use_container_width=True)
 
         st.caption("Use this chart to spot which sites are carrying the load and how production evolves across the planning horizon.")
 
+    st.markdown('</div>', unsafe_allow_html=True) # END CARD: Production
+
+    # START CARD: Transport
+    st.markdown('<div class="industrial-card">', unsafe_allow_html=True)
     st.subheader("Transport plan")
     st.dataframe(transport_df, use_container_width=True)
 
@@ -225,6 +248,7 @@ def render_optimization_results(role: str) -> None:
                 labels={"route": "Route", "shipment": "Shipment (tons)", "trips": "Trips", "mode": "Mode"},
             )
             fig_route.update_traces(textposition="outside")
+            fig_route.update_layout(template="plotly_dark", paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
             st.plotly_chart(fig_route, use_container_width=True)
 
             mode_agg = (
@@ -240,10 +264,15 @@ def render_optimization_results(role: str) -> None:
                 title="Mode utilization (tons vs trips)",
                 labels={"value": "Value", "mode": "Mode", "variable": "Metric"},
             )
+            fig_mode.update_layout(template="plotly_dark", paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
             st.plotly_chart(fig_mode, use_container_width=True)
 
         st.caption("Hover over bars to see trips and identify which corridors and modes are the busiest.")
 
+    st.markdown('</div>', unsafe_allow_html=True) # END CARD: Transport
+
+    # START CARD: Inventory
+    st.markdown('<div class="industrial-card">', unsafe_allow_html=True)
     st.subheader("Inventory levels")
     st.dataframe(inventory_df, use_container_width=True)
 
@@ -268,6 +297,7 @@ def render_optimization_results(role: str) -> None:
                 color="plant",
                 title=title,
             )
+            fig_inv.update_layout(template="plotly_dark", paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
             st.plotly_chart(fig_inv, use_container_width=True)
 
             heatmap_df = inv_plot_df.pivot_table(index="plant", columns="month", values="inventory", aggfunc="mean")
@@ -281,6 +311,7 @@ def render_optimization_results(role: str) -> None:
                     title="Inventory heatmap (average tons)",
                     labels={"color": "Inventory (tons)"},
                 )
+                fig_heat.update_layout(template="plotly_dark", paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig_heat, use_container_width=True)
 
             cushion_df = (
@@ -298,9 +329,12 @@ def render_optimization_results(role: str) -> None:
                     title="Inventory cushion by plant",
                     labels={"value": "Inventory (tons)", "plant": "Plant", "variable": "Metric"},
                 )
+                fig_cushion.update_layout(template="plotly_dark", paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig_cushion, use_container_width=True)
 
             st.caption("Use the heatmap and cushion chart to spot plants that are drifting close to zero inventory.")
+    
+    st.markdown('</div>', unsafe_allow_html=True) # END CARD: Inventory
 
     st.divider()
     st.subheader("Export")
